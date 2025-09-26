@@ -1,0 +1,16 @@
+{
+  "name": "clang-template",
+  "version": "1.0.0",
+  "description": "clang template",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hiroshees/clang-template.git"
+  },
+  "keywords": [],
+  "author": "Hiroshi Fujiwara",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hiroshees/clang-template/issues"
+  },
+  "homepage": "https://github.com/hiroshees/clang-template#readme"
+}
