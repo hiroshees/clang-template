@@ -1,0 +1,53 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      // transpile typescript project
+      "label": "pnpm tsc",
+      "type": "shell",
+      "command": "pnpm",
+      "args": ["tsc", "--project", "${workspaceFolder}/tsconfig.build.json"],
+      "problemMatcher": ["$tsc"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
+    },
+    {
+      // resolve import path
+      "label": "pnpm tsc-alias",
+      "type": "shell",
+      "command": "pnpm",
+      "args": [
+        "tsc-alias",
+        "--project",
+        "${workspaceFolder}/tsconfig.build.json"
+      ],
+      "problemMatcher": ["$tsc"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
+    },
+    {
+      "label": "Compile Current TS File",
+      "type": "shell",
+      "dependsOrder": "sequence",
+      "dependsOn": ["pnpm tsc", "pnpm tsc-alias"]
+    }
+  ]
+}

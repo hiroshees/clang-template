@@ -1,0 +1,20 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run Current Ts File",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/dist/${fileBasenameNoExtension}.js",
+      "sourceMaps": true,
+      // トランスパイルされたJavaScriptファイルがどこにあるかをデバッガーに伝えます。
+      "outFiles": ["${workspaceFolder}/dist/**/*.js"],
+      // 現在の作業ディレクトリを設定します。
+      "cwd": "${workspaceFolder}",
+      // デバッガーがアタッチされた後に自動的にコンソールを開きます。
+      "console": "integratedTerminal",
+      // 特定のタスクを実行する指定
+      "preLaunchTask": "Compile Current TS File"
+    }
+  ]
+}
