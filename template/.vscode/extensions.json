@@ -3,9 +3,11 @@
     // C/C++ Extension Pack
     "ms-vscode.cpptools-extension-pack",
     // C/C++ IntelliSense, debugging, and code browsing.
-    "ms-vscode.cpptools",
+    //"ms-vscode.cpptools",
     // C/C++ Extension UI Themes
     "ms-vscode.cpptools-themes",
+    // C linter
+    "llvm-vs-code-extensions.vscode-clangd",
     // スペルチェッカー
     "streetsidesoftware.code-spell-checker",
     // Prettier (Python以外も含む汎用フォーマッター)

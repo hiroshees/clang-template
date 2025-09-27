@@ -43,7 +43,9 @@
         // C/C++ Extension Pack
         "ms-vscode.cpptools-extension-pack",
         // C/C++ IntelliSense, debugging, and code browsing.
-        "ms-vscode.cpptools",
+        //"ms-vscode.cpptools",
+        // C linter
+        "llvm-vs-code-extensions.vscode-clangd",
         // C/C++ Extension UI Themes
         "ms-vscode.cpptools-themes",
         // スペルチェッカー

@@ -1,35 +1,27 @@
 {
-  "editor.codeActionsOnSave": {
-    //"source.addMissingImports": "explicit",
-    //"source.fixAll.eslint": "explicit"
-  },
+  "editor.codeActionsOnSave": {},
   "files.eol": "\n",
-  // "eslint.runtime": "node",
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
+  // "C_Cpp.clang_format_path": "/usr/bin/clang-format",
   "editor.formatOnType": false,
   "editor.formatOnPaste": false,
   "editor.formatOnSave": true,
   "editor.rulers": [200],
   "editor.tabSize": 2,
+  "editor.detectIndentation": true,
   "editor.insertSpaces": true,
   //"editor.wordWrap": "off",
   "editor.renderControlCharacters": true,
   "editor.quickSuggestions": {
     "comments": false
   },
-  "prettier.singleQuote": true,
-  "prettier.printWidth": 80,
-  "prettier.semi": true,
-  "prettier.tabWidth": 2,
-  "prettier.ignorePath": ".gitignore",
-  "redhat.telemetry.enabled": false,
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.patterns": {
     "*.ts": "${capture}.js, ${capture}.typegen.ts",
     "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
     "*.jsx": "${capture}.js",
     "*.tsx": "${capture}.ts, ${capture}.typegen.ts",
-    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, .eslintrc.json, next.config.mjs, postcss.config.mjs, tailwind.config.ts, tsconfig.json, next-env.d.ts, .gitignore, next.config.ts, .eslintrc.cjs, .env, .env.example, eslint.config.mjs, eslint.config.js, .lintstagedrc, .prettierrc, .prettierrc.mjs, .prettierignore, .editorconfig, .tool-versions, babel.config.cjs, jest.config.js, LICENSE",
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, .gitignore, .env, .env.example, .lintstagedrc, .editorconfig, .tool-versions, .clang-format, compile_flags.txt, LICENSE",
     "*.mts": "${capture}.typegen.ts",
     "*.cts": "${capture}.typegen.ts"
   },
@@ -45,5 +37,5 @@
   // Linux
   "terminal.integrated.defaultProfile.linux": "bash",
   // macOS Catalina以降
-  "terminal.integrated.defaultProfile.osx": "zsh"
+  "terminal.integrated.defaultProfile.osx": "zsh",
 }
