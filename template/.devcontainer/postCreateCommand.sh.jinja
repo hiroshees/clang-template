@@ -32,15 +32,15 @@ else
   echo "asdfでnodejsのプラグインをインストールします"
   asdf plugin add nodejs
   echo "asdfでnodejsをインストールします"
-  asdf install nodejs latest:{{node_version}}
+  asdf install nodejs latest:
   echo "asdfでpnpmのプラグインをインストールします"
   asdf plugin add pnpm
   echo "asdfでpnpmをインストールします"
   asdf install pnpm latest
   echo "asdfでnodejsとpnpmの利用を設定します"
-  asdf set -u nodejs latest:{{node_version}}
+  asdf set -u nodejs latest:
   asdf set -u pnpm latest
-  asdf set nodejs latest:{{node_version}}
+  asdf set nodejs latest:
   asdf set pnpm latest
   echo "asdfのインストールが完了しました"
   sudo ln -s /home/vscode/.asdf/shims/node /usr/bin/node
@@ -48,13 +48,9 @@ else
   echo "asdfのシンボリックリンクを作成しました"
 fi
 
-# echo "aptを更新します"
-# sudo apt update
-# echo "C言語実行環境をインストールします"
-# sudo apt install -y gcc gdb
+echo "aptを更新します"
+sudo apt update
+echo "C言語実行環境をインストールします"
+sudo apt install -y gcc gdb
 
-# echo "" >> ~/.bashrc
-# echo "# pgadmin alias" >> ~/.bashrc
-# echo "alias pgadmin='psql -h db -U user -d mydatabase'" >> ~/.bashrc
-# source ~/.bashrc
 echo "完了しました"

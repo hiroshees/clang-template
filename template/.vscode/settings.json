@@ -1,10 +1,10 @@
 {
   "editor.codeActionsOnSave": {
-    "source.addMissingImports": "explicit",
-    "source.fixAll.eslint": "explicit"
+    //"source.addMissingImports": "explicit",
+    //"source.fixAll.eslint": "explicit"
   },
   "files.eol": "\n",
-  "eslint.runtime": "node",
+  // "eslint.runtime": "node",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnType": false,
   "editor.formatOnPaste": false,
@@ -22,7 +22,6 @@
   "prettier.semi": true,
   "prettier.tabWidth": 2,
   "prettier.ignorePath": ".gitignore",
-  "css.lint.unknownAtRules": "ignore",
   "redhat.telemetry.enabled": false,
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.patterns": {
@@ -36,20 +35,6 @@
   },
   "search.exclude": {
     "**/node_modules": true
-  },
-  "[prisma]": {
-    "editor.defaultFormatter": "Prisma.prisma"
-  },
-  "tailwindCSS.experimental.classRegex": [
-    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
-    ["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
-  ],
-  "tailwind-fold.autoFold": true,
-  "typescript.enablePromptUseWorkspaceTsdk": true,
-  "typescript.tsdk": "node_modules/typescript/lib",
-  "typescript.preferences.importModuleSpecifier": "non-relative",
-  "eslint.options": {
-    "overrideConfigFile": "eslint.config.js"
   },
   // Windows GitBash
   "terminal.integrated.defaultProfile.windows": "Git Bash",

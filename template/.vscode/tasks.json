@@ -2,52 +2,40 @@
   "version": "2.0.0",
   "tasks": [
     {
-      // transpile typescript project
-      "label": "pnpm tsc",
-      "type": "shell",
-      "command": "pnpm",
-      "args": ["tsc", "--project", "${workspaceFolder}/tsconfig.build.json"],
-      "problemMatcher": ["$tsc"],
-      "group": {
-        "kind": "build",
-        "isDefault": true
-      },
-      "presentation": {
-        "reveal": "always",
-        "panel": "shared"
-      },
-      "options": {
-        "cwd": "${workspaceFolder}"
-      }
-    },
-    {
-      // resolve import path
-      "label": "pnpm tsc-alias",
-      "type": "shell",
-      "command": "pnpm",
+      "label": "C/C++: gcc build",
+      "type": "cppbuild",
+      "command": "/usr/bin/gcc",
       "args": [
-        "tsc-alias",
-        "--project",
-        "${workspaceFolder}/tsconfig.build.json"
+        "-fdiagnostics-color=always",
+        "-g",
+        "${file}",
+        "-o",
+        "${workspaceFolder}/build/${fileBasenameNoExtension}",
+        "-lm"
       ],
-      "problemMatcher": ["$tsc"],
-      "group": {
-        "kind": "build",
-        "isDefault": true
-      },
-      "presentation": {
-        "reveal": "always",
-        "panel": "shared"
-      },
       "options": {
         "cwd": "${workspaceFolder}"
-      }
+      },
+      "problemMatcher": ["$gcc"],
+      "group": "build"
     },
     {
-      "label": "Compile Current TS File",
-      "type": "shell",
-      "dependsOrder": "sequence",
-      "dependsOn": ["pnpm tsc", "pnpm tsc-alias"]
+      "label": "C/C++: g++ build",
+      "type": "cppbuild",
+      "command": "/usr/bin/g++",
+      "args": [
+        "-fdiagnostics-color=always",
+        "-g",
+        "${file}",
+        "-o",
+        "${workspaceFolder}/build/${fileBasenameNoExtension}",
+        "-lm"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": ["$gcc"],
+      "group": "build"
     }
   ]
 }

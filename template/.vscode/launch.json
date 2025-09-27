@@ -2,19 +2,44 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Run Current Ts File",
-      "type": "node",
+      "name": "C/C++: gcc build",
+      "type": "cppdbg",
       "request": "launch",
-      "program": "${workspaceFolder}/dist/${fileBasenameNoExtension}.js",
-      "sourceMaps": true,
-      // トランスパイルされたJavaScriptファイルがどこにあるかをデバッガーに伝えます。
-      "outFiles": ["${workspaceFolder}/dist/**/*.js"],
-      // 現在の作業ディレクトリを設定します。
+      "program": "${workspaceFolder}/build/${fileBasenameNoExtension}",
+      "args": [],
+      "stopAtEntry": false,
       "cwd": "${workspaceFolder}",
-      // デバッガーがアタッチされた後に自動的にコンソールを開きます。
-      "console": "integratedTerminal",
-      // 特定のタスクを実行する指定
-      "preLaunchTask": "Compile Current TS File"
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ],
+      "preLaunchTask": "C/C++: gcc build"
+    },
+    {
+      "name": "C/C++: g++ build",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/${fileBasenameNoExtension}",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ],
+      "preLaunchTask": "C/C++: g++ build"
     }
   ]
 }
