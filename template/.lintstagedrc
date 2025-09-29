@@ -1,4 +1,3 @@
 {
-  "*.{js,mjs,cjs,ts,jsx,tsx}": ["eslint --fix"],
-  "**/*.{js,mjs,cjs,ts,jsx,tsx,md,json,yml,yaml}": ["prettier --write"]
+  "**/*.{c, cpp}": ["clang-format -i"]
 }

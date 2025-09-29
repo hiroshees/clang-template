@@ -19,12 +19,3 @@ jobs:
 
       - name: Install package
         run: pnpm install
-
-      - name: Run lint
-        run: pnpm run lint:fix
-
-      - name: Run format
-        run: pnpm run format:fix
-
-      - name: Run unittest
-        run: pnpm run test

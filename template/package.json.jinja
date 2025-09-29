@@ -15,12 +15,6 @@
   "type": "module",
   "main": "dist/index.js",
   "scripts": {
-    "build": "pnpm tsc --project ./tsconfig.build.json && tsc-alias --project ./tsconfig.build.json",
-    "start": "node dist",
-    "test": "NODE_OPTIONS='--experimental-vm-modules' jest",
-    "format": "prettier --check \"**/*.{js,mjs,cjs,ts,jsx,tsx,md,json,yml,yaml}\"",
-    "format:fix": "prettier --write \"**/*.{js,mjs,cjs,ts,jsx,tsx,md,json,yml,yaml}\"",
-    "prepare": "husky"
   },
   "dependencies": {},
   "devDependencies": {
